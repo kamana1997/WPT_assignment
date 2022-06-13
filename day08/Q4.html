@@ -1,0 +1,19 @@
+<head>
+    <title>Q4</title>
+    <script>
+        var limit = parseInt(prompt("Enter limit of fibonacci series : "));
+        var num1 = 0;
+        var num2 = 1;
+        document.write(num1+"  "+num2)
+        for(var i = 1 ; i <= limit ; i++){
+            var temp = (num1+num2);
+            document.write(("  "+temp+"  "));
+            num1 = num2;
+            num2 = temp;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

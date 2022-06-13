@@ -1,0 +1,21 @@
+<head>
+    <title>Q3</title>
+    <script>
+        var numString = prompt("Enter 5 digit number : ");
+        var num = parseInt(numString)
+        if(numString.length != 5){
+            document.write("Invalid Number")
+        } else {
+            var sum = 0;
+        while(num != 0){
+            sum += num % 10;
+            num = Math.floor(num / 10);
+        }
+        document.write("Sum of digits = "+sum);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

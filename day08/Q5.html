@@ -1,0 +1,15 @@
+<head>
+    <title>Q5</title>
+    <script>
+        var principal = parseFloat(prompt("Enter principal : "))
+        var rate = parseFloat(prompt("Enter rate of interest : "))
+        var time = parseInt(prompt("Enter time period : "))
+
+        var amount = principal*(Math.pow(1+rate/100 , time));
+        document.write("Interest : "+(amount-principal));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
