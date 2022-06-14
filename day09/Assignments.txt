@@ -1,0 +1,12 @@
+1.Create a web page and take 3 employee details from prompt and show in table
+Employee property : Id,Name,Phone,Salary
+2.Create a web page with input box , button and perform following task on events:
+->On click event on button generate a alert
+->On mouseover event on button generate a alert
+->On focus event on input box generate a alert
+->On blur event on input box generate a alert
+->On click event on input box generate a alert
+3.(Optional)try to call the display employee function in question 1 on button click 
+____________________________________________________________
+1.Write a code to print fibonnaci series( 1,1,2,3,5,8,13,21...) till 100.
+2.Write a code to check the given string is palindrome or not. (abba)
