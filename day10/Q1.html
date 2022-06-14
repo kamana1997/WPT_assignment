@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Q1</title>
+    <script>
+        function displayTable(){
+            var num = document.getElementById("number").value;
+            var range = document.getElementById("range").value;
+
+            for(var i = 1 ; i <= range ; i++){
+                var parent = document.getElementById("output");
+                var result = document.createElement("h2");
+                result.innerText = num+" X "+i+" = "+(num*i);
+                parent.appendChild(result);
+            }
+        }
+
+        function clearScreen(){
+            document.getElementById("output").innerHTML ="";
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="number" placeholder="Enter number" onchange="clearScreen()">
+    <br><br>
+    <input type="number" id="range" placeholder="Enter Range" onchange="displayTable()">
+    <br><br>
+    <span id="output"></span>
+</body>
+</html>

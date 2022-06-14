@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Q3</title>
+    <script>
+        function operation(){
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var operator = document.getElementById("operation");
+            var selectedOpr = operator.options[operator.selectedIndex].value;
+
+            if(selectedOpr == "add"){
+                document.getElementById("sp1").innerHTML = (num1+num2);
+                return;
+            }
+
+            if(selectedOpr == "sub"){
+                document.getElementById("sp1").innerHTML = ((num1>=num2)?(num1-num2):(num2-num1));
+                return;
+            }
+
+            if(selectedOpr == "mult"){
+                document.getElementById("sp1").innerHTML = (num1*num2);
+                return;
+            }
+
+            if(selectedOpr == "divi"){
+                document.getElementById("sp1").innerHTML = ((num2!=0)?(num1/num2):("Division by zero not possible"));
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Enter 1st number">
+    <br><br>
+    <input type="number" id="num2" placeholder="Enter 2nd number">
+    <br><br>
+    <select name="Default" id="operation">
+        <option selected>--Choose Operation--</option>
+        <option value="add">Addition</option>
+        <option value="sub">Subtraction</option>
+        <option value="mult">Multiplication</option>
+        <option value="divi">Division</option>
+    </select>
+    <br><br>
+    <button id="btn" onclick="operation()" style="color: blue;">Calculate</button>
+    <br><br>
+    <span id="sp1"></span>
+</body>
+</html>

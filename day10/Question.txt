@@ -1,0 +1,13 @@
+1.Write code to print table (Take Number and range from user)
+If user inputs 2 and range 20 then print table of 2 till 20
+
+2.Write a code to accept name of Movie details from user and show in table.Use bootstrap to design the page
+Movie Fields: ID,Name,Actors,Genre,Release Date
+
+3.Write a program to take two numbers from text box and operation from third text box perform addition, multiplication, substraction, division.
+
+4.Perform Validation on Question 2:(Use user level validation)
+->All fields are required
+->Name must be of 5 chars at least
+->ID must be greater than 100
+
