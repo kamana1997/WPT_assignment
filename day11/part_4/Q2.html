@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Q2</title>
+    <script>
+        function convertString(msg){
+            var wordArr = msg.split(" ");
+            var newWordArr = [];
+            var joinWord = "";
+            for(var i = 0 ; i < wordArr.length ; i++){
+                var splitWord = wordArr[i].split("");
+                splitWord[0] = splitWord[0].toUpperCase();
+                
+                for(var j = 0 ; j < splitWord.length ; j++){
+                    joinWord += "" + splitWord[j];
+                }
+
+                newWordArr += " " +joinWord;
+                joinWord = "";
+            }
+            
+            console.log(newWordArr);
+            
+        }
+
+        convertString(prompt("Enter String"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

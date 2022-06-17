@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Q3</title>
+    <script>
+        function upperToLower(msg){
+            var smallMsg = msg.split(" ");
+            var joinSmallMsg = "";
+            var newMsg = [];
+            for(var i = 0 ; i < smallMsg.length ; i++){
+                var moreSmallMsg = smallMsg[i].split("");
+                for(var j = 0 ; j < moreSmallMsg.length ; j++){
+                    if(moreSmallMsg[j] == moreSmallMsg[j].toLowerCase()){
+                        moreSmallMsg[j] = moreSmallMsg[j].toUpperCase();
+                        joinSmallMsg += "" +moreSmallMsg[j];
+                    } else {
+                        moreSmallMsg[j] = moreSmallMsg[j].toLowerCase();
+                        joinSmallMsg += "" +moreSmallMsg[j];
+                    }
+                }
+
+                newMsg += " " +joinSmallMsg;
+                joinSmallMsg = "";
+            }
+
+            console.log(newMsg);
+        }
+
+        upperToLower(prompt("Enter String"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

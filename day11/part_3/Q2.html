@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Q2</title>
+    <script>
+        function countValue(str) {
+            if (str.length == 0) {
+                document.write("String passed is NULL");
+                return;
+            }
+
+            for (var i = 0; i < str.length; i++) {
+                var count = 0;
+                for (var j = 0; j < str.length; j++) {
+                    // To avoid double print
+                    if (str[i] == str[j] && i > j) {
+                        break;
+                    }
+                    if (str[i] == str[j]) {
+                        count++;
+                    }
+                }
+                if (count > 0){
+                    document.write("[ "+str[i]+" ] occurs "+count+" times <br>");
+                }
+            }
+        }
+
+        countValue(prompt("Enter String"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

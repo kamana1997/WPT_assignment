@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Q2</title>
+    <script>
+        function handle_onclick(){
+            alert("Clicked");
+        }
+
+        function handle_mouseover(){
+            alert("Mouse Over BUTTON..!!");
+        }
+
+        function handle_blur(){
+            console.log("This is blur event");
+        }
+
+        function handle_onfocus(){
+            console.log("This is onfocus event");
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onblur="handle_blur()" onclick="handle_onclick()" onfocus="handle_onfocus()">
+    
+    <br><br>
+
+    <button id="btn" onclick="handle_onclick()" onmouseover="handle_mouseover()">Click Me!</button>
+</body>
+</html>

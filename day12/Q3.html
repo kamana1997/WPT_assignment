@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Q3</title>
+    <script src="jquery.js"></script>
+
+    <script>
+        function calculateOperation() {
+            var num1 = parseInt($("#num1").val());
+            var num2 = parseInt($("#num2").val());
+            var opr = $("input[name='operation']:checked").val();
+
+            if (opr == "add") {
+                $("#sp").html("Addition = " + (num1 + num2))
+            } else if (opr == "sub") {
+                $("#sp").html("Subtraction = " + (num1 - num2))
+            } else if (opr == "mult") {
+                $("#sp").html("Multiplication = " + (num1 * num2))
+            } else if(opr == "divi"){
+                if (num2 == 0) {
+                    $("#sp").html("Division not possible by 0")
+                } else {
+                    $("#sp").html("Division = " + ((num1 / 1.0) / num2))
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="num1" placeholder="Enter Number">
+    <br><br>
+    <input type="number" id="num2" placeholder="Enter Number">
+    <br><br>
+    <label>Choose Operation :</label>
+    <br>
+    <input type="radio" name="operation" id="add" value="add">Addition
+    <br>
+    <input type="radio" name="operation" id="sub" value="sub">Subtraction
+    <br>
+    <input type="radio" name="operation" id="mult" value="mult">Multiplication
+    <br>
+    <input type="radio" name="operation" id="divi" value="divi">Division
+    <br><br><br>
+    <button onclick="calculateOperation()">CALCULATE</button>
+    <br><br>
+    <span id="sp"></span>
+</body>
+
+</html>

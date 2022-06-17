@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Q1</title>
+    <script>
+        var range = prompt("Enter Range");
+        var arr = [];
+        for(var i = 1 ; i <= range ; i++){
+            var obj = {
+                key : i,
+                value : i*i
+            }
+            arr.push(obj);
+        }
+        var temp = "{";
+        arr.forEach(item => temp += (item.key)+":"+(item.value)+" , ");
+        temp += "}";
+        console.log(temp);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

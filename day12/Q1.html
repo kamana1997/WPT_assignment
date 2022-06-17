@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Q1</title>
+    <script src="jquery.js"></script>
+
+    <script>
+        function displayTable(){
+            var num = $("#inputNumber").val();
+            var range = $("#range").val();
+
+            num = parseInt(num);
+            range = parseInt(range);
+
+            var tables = $("#sp");
+            for(var i = 1 ; i <= range ; i++){
+                var temp = num+" X "+i+" = "+(i*num)+"<br>";
+                tables.append(temp);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="inputNumber" placeholder="Enter Number">
+    <br><br>
+    <input type="number" id="range" placeholder="Enter range">
+    <br><br>
+    <button onclick="displayTable()">CALCULATE</button>
+    <br><br>
+    <span id="sp"></span>
+</body>
+</html>

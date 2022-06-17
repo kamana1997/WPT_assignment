@@ -1,0 +1,147 @@
+<html>
+<head>
+    <title>Q2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            background-color: #BBAFE0;
+        }
+    </style>
+
+    <script>
+        var movie = [];
+
+        function reset(){
+            document.getElementById("movieId").value = "";
+            document.getElementById("movieName").value = "";
+            document.getElementById("movieReleaseDate").value = "";
+            var movieCast = document.getElementsByName("movieCast");
+            for(var i = 0 ; i < movieCast.length ; i++){
+                movieCast[i].checked = false;
+            }
+            var movieGenre = document.getElementsByName("movieGenre");
+            for(var i = 0 ; i < movieGenre.length ; i++){
+                movieGenre[i].checked = false;
+            }
+        }
+
+        function saveMovie(){
+
+            var movieCast_arr = document.getElementsByName("movieCast");
+            var movieCast = [];
+            if(movieCast_arr[0].checked){
+                movieCast.push(movieCast_arr[0].value);
+            }
+            if(movieCast_arr[1].checked){
+                movieCast.push(movieCast_arr[1].value);
+            }
+            if(movieCast_arr[2].checked){
+                movieCast.push(movieCast_arr[2].value);
+            }
+            if(movieCast_arr[3].checked){
+                movieCast.push(movieCast_arr[3].value);
+            }
+
+            var movieGenre_arr = document.getElementsByName("movieGenre");
+            var movieGenre = "";
+            if(movieGenre_arr[0].checked){
+                movieGenre = movieGenre_arr[0].value;
+            } else if(movieGenre_arr[1].checked){
+                movieGenre = movieGenre_arr[1].value;
+            } else if(movieGenre_arr[2].checked){
+                movieGenre = movieGenre_arr[2].value;
+            } else if(movieGenre_arr[3].checked){
+                movieGenre = movieGenre_arr[3].value;
+            } else if(movieGenre_arr[4].checked){
+                movieGenre = movieGenre_arr[4].value;
+            }
+
+            var temp = {
+                movieId : document.getElementById("movieId").value,
+                movieName : document.getElementById("movieName").value,
+                movieReleaseDate : document.getElementById("movieReleaseDate").value,
+                movieGenre : movieGenre,
+                movieCast : movieCast
+            }
+            console.log(temp.movieCast);
+            movie.push(temp);
+            reset();
+        }
+
+        function fetchMovie(){
+            var html = "";
+            for(var i = 0 ; i < movie.length ; i++){
+                html += "<tr><td>"+movie[i].movieId+"</td><td>"+movie[i].movieName+"</td><td>"+movie[i].movieReleaseDate+"</td><td>"+movie[i].movieGenre+"</td><td>";
+                for(var j = 0 ; j < movie[i].movieCast.length ; j ++){
+                    html += movie[i].movieCast[j]+"<br>"
+                }
+                html += "</td></tr>"
+            }
+            document.getElementById("table-data").innerHTML = html;
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-around align-items-center"  style="height : 98vh">
+            <div class="col-5 border p-5 shadow">
+                <div class="mb-3 shadow">
+                    <input type="text" id="movieId" class="form-control" placeholder="Movie ID">
+                </div>
+                <div class="mb-3 shadow">
+                    <input type="text" id="movieName" class="form-control" placeholder="Movie Name">
+                </div>
+                <div class="mb-3 shadow">
+                    <input type="text" id="movieReleaseDate" class="form-control" placeholder="Movie Release Date">
+                </div>
+                <div class="align-items-left border shadow mb-3">
+                    <h5>Movie Cast : </h5> 
+                    <input type="checkbox" name="movieCast" value="Kamana">Kamana
+                    <br>
+                    <input type="checkbox" name="movieCast" value="Joy">Joy
+                    <br>
+                    <input type="checkbox" name="movieCast" value="Udit">Udit
+                    <br>
+                    <input type="checkbox" name="movieCast" value="Hardik">Hardik
+                </div>
+                <div class="align-items-left border shadow mb-3">
+                    <h5>Movie Genre : </h5> 
+                    <input type="radio" name="movieGenre" value="Thriller">Thriller
+                    <br>
+                    <input type="radio" name="movieGenre" value="Romance">Romance
+                    <br>
+                    <input type="radio" name="movieGenre" value="Horror">Horror
+                    <br>
+                    <input type="radio" name="movieGenre" value="Action">Action
+                    <br>
+                    <input type="radio" name="movieGenre" value="Comedy">Comedy
+                </div>
+                <div class="mb-2" style="text-align: center;">
+                    <button class="btn btn-primary" onclick="saveMovie()">SAVE MOVIE</button>
+                </div>
+            </div>
+            <div class="col-5 border shadow" style="height : 88vh">
+                <div class="mb-3 mt-2" style="text-align: center">
+                    <button class="btn btn-primary" onclick="fetchMovie()">Click For Movie List</button>
+                </div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Movie ID</th>
+                            <th>Movie Name</th>
+                            <th>Release Date</th>
+                            <th>Movie Genre</th>
+                            <th>Movie Casts</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-data">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

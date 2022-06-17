@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Q4</title>
+    <script>
+        var num="1,2,3,4,5,6,7,8,9";
+        num.split(",");
+        var i = 0;
+        var num1 = 0; // 2
+        var num2 = 0; // 8
+        while(i < num.length){
+            if(num[i] == 2){
+                num1 = num[i];
+            }
+            if(num[i] == 8){
+                num2 = num[i];
+            }
+            i++;
+        }
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        console.log("Result (num1 * num2) = "+(num1*num2));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

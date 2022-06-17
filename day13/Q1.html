@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <title>Q1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+        </script>
+
+    <style>
+        .myblock {
+            height: 600px;
+            width: 1000px;
+            border: 1px solid black;
+            margin-top: 50px;
+        }
+
+        /* input[type='radio']:checked::after {
+            border-color: red;
+            background-color: red;
+        } */
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            employees = [
+                {
+                    "empId": "CDAC0092",
+                    "empName": "Joy Pahari",
+                    "empGender": "M",
+                    "dob": "1998-09-01",
+                    "email": "joy@cdac.in",
+                    "pL": ['c', 'javascript']
+                },
+                {
+                    "empId": "CDAC0083",
+                    "empName": "Hardik Agarwal",
+                    "empGender": "M",
+                    "dob": "1999-08-17",
+                    "email": "hardik@cdac.in",
+                    "pL": ['javascript']
+                },
+                {
+                    "empId": "CDAC0097",
+                    "empName": "Kamana Mathur",
+                    "empGender": "F",
+                    "dob": "1997-07-04",
+                    "email": "kamana@cdac.in",
+                    "pL": ['c', 'python', 'javascript']
+                },
+                {
+                    "empId": "CDAC0100",
+                    "empName": "Udit Keskar",
+                    "empGender": "M",
+                    "dob": "1999-11-23",
+                    "email": "udit@cdac.in",
+                    "pL": ['c', 'javascript']
+                }
+            ];
+            $("#fetchBtn").click(function () {
+                console.log(employees);
+                for (var i = 0; i < employees.length; i++) {
+                    var tr = $("<tr></tr>");
+                    var td = $("<td>" + employees[i].empId.toString() + "</td>");
+                    tr.append(td);
+                    td = $("<td>" + employees[i].empName.toString() + "</td>");
+                    tr.append(td);
+                    td = $("<td>" + employees[i].empGender.toString() + "</td>");
+                    tr.append(td);
+                    td = $("<td>" + employees[i].dob.toString() + "</td>");
+                    tr.append(td);
+                    td = $("<td>" + employees[i].email.toString() + "</td>");
+                    tr.append(td);
+                    var b = employees[i].pL;
+                    var x = "";
+                    for (var j = 0; j < b.length; j++) {
+                        x += b[j] + "<br>";
+                    }
+                    td = $("<td>" + x + "</td>");
+                    tr.append(td);
+                    $("#tableData").append(tr);
+                }
+
+            });
+            $("#regBtn").click(function () {
+                $("#empId").val("");
+                $("#empName").val("");
+                $("#dob").val("");
+                $("#email").val("");
+                for (var i = 0; i < 3; i++) {
+                    $("input:radio").prop('checked', false);
+                    $("input:checkbox").prop('checked', false);
+                }
+            });
+            $("#empId").change(function () {
+                $("p").remove(".demo");
+                var eId = $("#empId").val().toString().toUpperCase();
+                var flag = false;
+                for (var i = 0; i < employees.length; i++) {
+                    if (employees[i].empId.toString() === eId) {
+                        $("#empName").val(employees[i].empName);
+
+                        $("#dob").val(employees[i].dob);
+
+                        var a = employees[i].empGender.toString();
+                        $("input:radio[name=" + a + "]").prop('checked', true);
+
+                        $("#email").val(employees[i].email);
+
+                        var b = employees[i].pL;
+                        for (var j = 0; j < b.length; j++) {
+                            var temp = b[j];
+                            $("input:checkbox[name=" + temp + "]").prop('checked', true);
+                        }
+
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag === false) {
+                    var temp = $("<p class = 'px-1 demo' style = 'color : red; font-size : 0.8rem'>Sorry!! Employee does not exist</p>")
+                    $("#empIdDiv").append(temp);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-around align-items-center" style="height : 98vh">
+            <div class="col-5 border p-5 shadow">
+                <div class="mb-3 shadow" id="empIdDiv">
+                    <input type="text" id="empId" class="form-control" placeholder="Employee ID" required>
+                </div>
+                <div class="mb-3 shadow">
+                    <input type="text" id="empName" class="form-control" placeholder="Employee Name" disabled>
+                </div>
+                <div class="mb-3 shadow p-2">
+                    <h5>Gender : </h5>
+                    <input class="myClass" type="radio" id="empGM" name="M" value="M" disabled>Male
+                    <br>
+                    <input class="myClass" type="radio" id="empGF" name="F" value="F" disabled>Female
+                    <br>
+                    <input class="myClass" type="radio" id="empGO" name="O" value="O" disabled>Others
+                </div>
+                <div class="mb-3 shadow">
+                    <input type="text" id="dob" class="form-control" placeholder="Date Of Birth" disabled>
+                </div>
+                <div class="mb-3 shadow">
+                    <input type="email" id="email" class="form-control" placeholder="E-mail" disabled>
+                </div>
+                <div class="align-items-left border shadow mb-3 p-2">
+                    <h5>Programming language : </h5>
+                    <input type="checkbox" name="c" value="c" disabled>C
+                    <br>
+                    <input type="checkbox" name="python" value="python" disabled>Python
+                    <br>
+                    <input type="checkbox" name="javascript" value="javascript" disabled>JavaScript
+                </div>
+                <div class="mb-2" style="text-align: center;">
+                    <button class="btn btn-primary" id="regBtn">Clear</button>
+                </div>
+            </div>
+            <div class="col-5 border shadow" style="height : 88vh">
+                <div class="mb-3 mt-2" style="text-align: center">
+                    <button class="btn btn-primary" id="fetchBtn" onclick="fetchList()">Click For Employee List</button>
+                </div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Employee Name</th>
+                            <th>Employee Gender</th>
+                            <th>DOB</th>
+                            <th>Employee email</th>
+                            <th>Programming Languages</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableData">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

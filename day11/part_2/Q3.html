@@ -1,0 +1,27 @@
+<head>
+    <title>Q3</title>
+    <script>
+        var msg = prompt("Enter String to be checked");
+        var msg = msg.toLowerCase();
+        var duplicateMsg = msg.split(" ");
+        var newMsg = "";
+        for(var i = 0 ; i < duplicateMsg.length-1 ; i++){
+            if(duplicateMsg[i] == ""){
+                continue;
+            }
+            for(var j = i+1 ; j < duplicateMsg.length ; j++){
+                if(duplicateMsg[j] === duplicateMsg[i]){
+                    duplicateMsg[j] = "";
+                }
+            }
+        }
+        for(var i = 0 ; i < duplicateMsg.length ; i++){
+            newMsg = newMsg+" "+duplicateMsg[i];
+        }
+        document.write("String after deleting duplicate : "+newMsg);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

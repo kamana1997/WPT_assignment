@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Q1</title>
+    <script>
+        function largestWord(str){
+            var strArr = str.split(" ");
+            var maxWord = strArr[0];
+            
+            for(var i = 1 ; i < strArr.length; i++){
+                if(strArr[i].length > maxWord.length){
+                    maxWord = strArr[i];
+                }
+            }
+            document.write("Longest Word in the string : [ "+maxWord+" ]");
+        }
+
+        largestWord(prompt("Enter String"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
