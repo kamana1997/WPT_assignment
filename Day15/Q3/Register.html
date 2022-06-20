@@ -1,0 +1,114 @@
+
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
+        <style>
+            body{
+                background-color: #36454f;
+            }
+            .main-container{
+                height: 97vh;
+                /* border: 1px solid white; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .register-box{
+                height: 30rem;
+                width: 30rem;
+                /* border: 1px solid white; */
+                padding: 2rem;
+
+            }
+            .register{
+                height: 5rem;
+                width: 30rem;
+                /* border: 1px solid white; */
+                text-align: center;
+                padding-bottom: 1rem;
+            }
+            .input-block{
+                margin-bottom: 1.5rem;
+                padding-left: 4rem;
+            }
+            .input-block .para{
+                 color: aliceblue;
+                 
+            }
+            .input-control{
+                width: 22rem;;
+                height: 3rem;
+                font-size: 15px;
+                
+                background: none;
+                border: none;
+                border-bottom: 1px solid gray;
+            }
+            .para{
+                color: gray;
+            
+                
+            }
+            .btn{
+                background-color: forestgreen;
+                height: 3rem;
+                width: 75%;
+                 font-size: 1rem;
+                 margin-left: 3.6rem;  
+                border: none;
+                color: aliceblue;
+               
+            }
+            .btn:hover{
+                color: darkgrey;
+            }
+            h1{
+                color: darkgrey;
+                font-family: cursive;
+                font-size: 3rem;
+            }
+            .link{
+                padding-left: 9rem;
+                padding-top: 1rem;
+               
+            }
+            .link a{
+                text-decoration: none;
+                color: darkgrey;
+            }
+            .icon{
+                color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="register-box">
+                <div class="register">
+                    <h1>Register</h1>
+                </div>
+                <div class="input-block">
+                    <input type="text" placeholder="Username" class="input-control">
+                </div>
+                <div class="input-block">
+                    <input type="password" placeholder="Password" class="input-control">
+                </div>
+                <div class="input-block">
+                    <input type="email" placeholder="Email-address" class="input-control">
+                </div>
+                <div class="input-block para">
+                    <i class="icon fa fa-circle-o"></i>
+                    <p>Accept rules and conditions</p>
+                </div>
+                <div class="input-box">
+                    <button class="btn">Register</button>
+                </div>
+                <div class=" link">
+                    <a href="#"> Already have an account?</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
