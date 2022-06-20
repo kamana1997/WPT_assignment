@@ -2,19 +2,18 @@ var fs = require("fs");
 var i = 1;
 var str = "";
 function write_table_line() {
-    str = (i*2) + "\n";
+    str = (i * 2) + "\n";
     i++;
-    fs.appendFile("demo.txt",str,function(err){
-        if (!err){
-            if(i<10){
+    fs.appendFile("demo.txt", str, function (err) {
+        if (!err) {
+            if (i < 10) {
                 write_table_line();
-            }else{
+            } else {
                 console.log("Table Done");
             }
-        }else{
+        } else {
             console.log("Unable to write the data");
         }
     });
 }
-
 write_table_line();
