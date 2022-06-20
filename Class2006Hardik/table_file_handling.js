@@ -1,6 +1,3 @@
-
-//TO-DO
-
 var fs = require("fs");
 var i = 1;
 var str = "";
@@ -19,3 +16,5 @@ function write_table_line() {
         }
     });
 }
+
+write_table_line();
