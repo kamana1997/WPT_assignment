@@ -1,6 +1,4 @@
 1.Create a server that serves the register.html page and calc.html and table.html(this show the table at center of page.Just use dummy columns)
 Calc.html contains three text box.Two text for number input and one for operation
 Server also performs multiplication ,division,addition and substraction.
-After successful execution, Change third text box to four radio button of addition,substraction,multiplication and division and try to perform operation on backend server.Use GET method
-
-
+After successful execution, Change third text box to four radio button of addition,substraction,multiplication and division and try to perform operation on backend server.Use GET method.
