@@ -1,6 +1,18 @@
 var http = require("http");
 var fs = require("fs");
 
+function editCalc(result){
+    var oldPage = fs.readFileSync("Public/calc.html");
+    fs.writeFileSync("Public/calc_old.html",oldPage);
+
+
+    var newPage = fs.readFileSync("Public/newCalc.txt").toString();
+    newPage += result.toString();
+    newPage += fs.readFileSync("Public/newCalc1.txt").toString();
+    fs.writeFileSync("Public/calc.html",newPage);
+}
+
+
 var server = http.createServer((req,res) => {
     
     if(req.url.endsWith(".html")){
@@ -46,7 +58,18 @@ var server = http.createServer((req,res) => {
                         break;
         }
 
-        console.log(result + " " + str);
+        editCalc(result);
+        fs.readFile("Public/calc.html",(err,data) => {
+
+            if(!err){
+                res.write(data);
+                res.end();
+            }else{
+                res.write("Error! 500 Internal Server Error.")
+        res.end();
+            }
+
+        });
        
     }else{
         res.write("Error! 404 Not Found.")
