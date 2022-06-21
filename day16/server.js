@@ -31,7 +31,6 @@ var server = http.createServer((req,res) => {
         var urlStr = req.url.substring(1);
         var queryParam = urlStr.split("?");
        
-        console.log(queryParam);
 
         var data = new URLSearchParams(queryParam[1]);
         
@@ -40,7 +39,6 @@ var server = http.createServer((req,res) => {
         var opr = data.get("opr");
 
         var result = 0;
-        var str = "";
         switch(opr){
             case 'add': result = num1 + num2;
                         break;
@@ -51,10 +49,10 @@ var server = http.createServer((req,res) => {
             case 'mul': result = num1 * num2;
                         break;
 
-            case 'divi': result = ((num2 == 0) ? (str = "NAHI HOGA") : ((num1*1.0)/num2));
+            case 'divi': result = ((num2 == 0) ? ( "NAHI HOGA") : ((num1*1.0)/num2));
                         break;
                 
-            default : str = "Bhag Ja Yahn Se!"
+            default : result = "Bhag Ja Yahn Se!"
                         break;
         }
 
