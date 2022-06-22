@@ -1,0 +1,12 @@
+1.Create a express server and serve calc.html and registe.html.
+Calc.html file contains two text box for number and four radio button for operation. Perform addition,substraction,multiplication,division on the server.Use Ajax for calc.html
+register.html contains ID,Name,Date Of birth, Country,State,Language Checkbox(at least three language)
+Use Ajax to Submit Register.html page details and store on server and fetch all user details on button click
+
+2.Create Fruit Shop billing App:
+->Add Fruit
+->Fruit List 
+Fruit Data: Fruit Name , rate, quantity, expiry date
+Use bootstrap/CSS to design resposive page.Also Create Navbar to navigate on pages
+Use express for backend and Use jquery/Javascript for frontend
+
