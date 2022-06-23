@@ -11,14 +11,24 @@
 
 // export default App;
 
-import Calc from "./AssignmentComponentsDay18/Q2/Calc" 
+// import Calc from "./AssignmentComponentsDay18/Q2/Calc" 
 
+// function App(){
+//   return(
+//     <div>
+//       <Calc/>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import FruitList from "./AssignmentComponentsDay18/Q3/FruitList"
 function App(){
   return(
     <div>
-      <Calc/>
+      <FruitList/>
     </div>
   );
 }
-
 export default App;
