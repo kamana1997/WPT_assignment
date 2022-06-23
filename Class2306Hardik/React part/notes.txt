@@ -38,6 +38,8 @@ JSX
 -> Expression: {expressionHere} it must return something example:
    {a+b} it will return sum of a and b
    {x.toLowerCase()} it will return x to a lower case string
+   also if we have defined a var say var name = Hardik so we can use this value as
+   {name}
 
 Rules:
 -> Component name must start with upper case. example App component(function name not file name)
