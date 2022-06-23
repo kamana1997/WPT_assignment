@@ -19,14 +19,12 @@ Production Phase
 -> here we pick up the genrated code and simply use it for production env.
 
 
-Command:
+Commands:
+-> npx create-react-app first-react
+-> npm start
 
-npx create-react-app first-react
-npm start
+Note: We have to work in src folder
 
-We have to work in src folder
-
-Startup:
 public/index.html -> src/index.js -> App.js(Component) -> we will keep all user defined components
 
 -> in the initial phases do not touch any file befor app.js as it may cause 
@@ -36,6 +34,10 @@ public/index.html -> src/index.js -> App.js(Component) -> we will keep all user 
 JSX
 -> similiar to HTML but more restric rules and got extra features
 -> Close all tags mandatory like br also in this way: <br/>
+-> Comments:  {/*comment here*/}
+-> Expression: {expressionHere} it must return something example:
+   {a+b} it will return sum of a and b
+   {x.toLowerCase()} it will return x to a lower case string
 
 Rules:
 -> Component name must start with upper case. example App component(function name not file name)
@@ -44,4 +46,5 @@ Rules:
 -> the outer tag can be only one as we can have only one root tag and no adjacent tag with the 
    parent tag.[like in our App.js the div tag is the parent tag and we can only add sub elemets
    like div k andr div]
+-> JSX must be inside return statement
 
