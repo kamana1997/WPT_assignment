@@ -1,0 +1,8 @@
+-> Front end framework
+-> Two phases:
+    1. Development phase 
+    2. Production phase -> If project is released and deployed on server for public.
+
+Development Phase:
+-> If project is in dev phase
+-> React use Development server.
