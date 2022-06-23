@@ -18,3 +18,9 @@ Production Phase
 -> The seprate dev react server is demolished and merged into express backend server.
 -> here we pick up the genrated code and simply use it for production env.
 
+
+Command:
+
+npx create-react-app first-react
+
+mpm start
