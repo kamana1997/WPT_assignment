@@ -1,7 +1,9 @@
 //dont change name App keep it default (recommendation)
 //import Hello from "./Components/Hello"
 // import Calc from "./CalcComponents/Calc"
-import List from "./Components/List"
+// import List from "./Components/List"
+import NameList from "./ListApp/NameList"
+
 function App(){
   var name = "Hardik Agarwal";
   return(
@@ -11,7 +13,8 @@ function App(){
       <Hello/>
   <Hello></Hello>*/}
       {/* <Calc /> */}
-      <List />
+      {/* <List /> */}
+      <NameList />
     </div>
   );
 }
