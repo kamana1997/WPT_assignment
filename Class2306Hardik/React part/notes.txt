@@ -61,3 +61,18 @@ or <Component />
 eample: 
 <Hello></Hello>
 
+
+State 
+-> State is used to retain the value and re-render the component if
+   value is changed
+
+import {useState} from "react"
+
+var [state,setState] = useState(DefaultValue);
+
+-> state is variable and setState is function name
+-> access value directly by state variable.
+-> but assign value by setState function and this fn will re-render compnent also
+-> setState simply assigns value and rerender page.
+-> set is compulsary prefix for functionName.
+
