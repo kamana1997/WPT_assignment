@@ -1,6 +1,7 @@
 //dont change name App keep it default (recommendation)
 //import Hello from "./Components/Hello"
-import Calc from "./CalcComponents/Calc"
+// import Calc from "./CalcComponents/Calc"
+import List from "./Components/List"
 function App(){
   var name = "Hardik Agarwal";
   return(
@@ -9,7 +10,8 @@ function App(){
       {/*<h1>Good Morning {name} </h1>
       <Hello/>
   <Hello></Hello>*/}
-      <Calc />
+      {/* <Calc /> */}
+      <List />
     </div>
   );
 }
