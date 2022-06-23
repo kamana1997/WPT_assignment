@@ -22,5 +22,26 @@ Production Phase
 Command:
 
 npx create-react-app first-react
+npm start
 
-mpm start
+We have to work in src folder
+
+Startup:
+public/index.html -> src/index.js -> App.js(Component) -> we will keep all user defined components
+
+-> in the initial phases do not touch any file befor app.js as it may cause 
+   issues hard to fix.
+-> So start working in App.js
+
+JSX
+-> similiar to HTML but more restric rules and got extra features
+-> Close all tags mandatory like br also in this way: <br/>
+
+Rules:
+-> Component name must start with upper case. example App component(function name not file name)
+-> component name and file name should be same (changing possible).
+-> inside return we can write JSX.
+-> the outer tag can be only one as we can have only one root tag and no adjacent tag with the 
+   parent tag.[like in our App.js the div tag is the parent tag and we can only add sub elemets
+   like div k andr div]
+
