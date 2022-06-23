@@ -50,3 +50,13 @@ Rules:
    like div k andr div]
 -> JSX must be inside return statement
 
+Importing Components:
+import componentName "path"
+then use component as JSX
+<Component>
+</Component>
+
+or <Component />
+eample: 
+<Hello></Hello>
+
