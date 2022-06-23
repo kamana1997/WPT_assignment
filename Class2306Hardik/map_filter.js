@@ -5,4 +5,12 @@ var newArr1 = arr.map(function(item){
 });
 console.log(newArr);
 console.log(newArr1);
+//spread operator ...
 
+var arr = [1,2,3]
+var new_arr = [...arr,89,4,67]
+console.log(new_arr);
+
+var arr = ['a','r','s'];
+var new_arr = ['Neha',...arr];
+console.log(new_arr);
