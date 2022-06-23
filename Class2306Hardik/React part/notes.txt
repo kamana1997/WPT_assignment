@@ -1,7 +1,7 @@
 -> Front end library
 -> React generates the JS, HTML,CSS code for browser.
--> It is SPA (Single Page Application) like in Gmail we switch between inbox and spams page remains 
-   same does'nt reloads but ui changes.
+-> It is SPA (Single Page Application) 
+like in Gmail we switch between inbox and spams page remains same does'nt reloads but ui changes.
 
 
 -> Two phases:
