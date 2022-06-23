@@ -1,7 +1,10 @@
+import Data from "./Data"
+
 function Hello(){
     return(
     <div>
-        <p>This is my component</p>
+        <h4>This is my component</h4>
+        <Data />
     </div>
     );
 }
