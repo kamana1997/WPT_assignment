@@ -1,8 +1,20 @@
--> Front end framework
+-> Front end library
+-> React generates the JS, HTML,CSS code for browser.
+-> It is SPA (Single Page Application) like in Gmail we switch between inbox and spams page remains 
+   same does'nt reloads but ui changes.
+
+
 -> Two phases:
     1. Development phase 
-    2. Production phase -> If project is released and deployed on server for public.
+    2. Production phase
 
 Development Phase:
 -> If project is in dev phase
 -> React use Development server.
+-> this development server helps in continuosly changing the ui and get generated html,css,js code.
+
+Production Phase
+-> If project is released and deployed on server for public.
+-> The seprate dev react server is demolished and merged into express backend server.
+-> here we pick up the genrated code and simply use it for production env.
+
