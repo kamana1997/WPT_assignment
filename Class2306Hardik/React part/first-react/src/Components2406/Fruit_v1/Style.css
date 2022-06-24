@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+    color: white;
+}
+table thead th{
+    color: white;
+}
+table tbody tr td {
+    color: white !important;
+}

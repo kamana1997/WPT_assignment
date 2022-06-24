@@ -2,3 +2,13 @@ Props:
 -> share data among components
 -> Parent C0mponent => Child component
 -> only to next Child then to next child and so on..
+
+Using CSS by BootStrap
+- go to index.html
+- add link tag below title
+- use same for jquery
+- if installing then put in public folder and call link tag
+
+Using CSS
+- Create seprate css file dont add style tag
+- for inline css use style attribute style = {{propertyName : value}}

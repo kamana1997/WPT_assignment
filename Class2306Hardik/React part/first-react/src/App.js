@@ -32,11 +32,21 @@
 //   );
 // }
 // export default App;
-import FruitList from "./Components2406/FruitList"
+
+
+// import FruitList from "./Components2406/FruitList"
+// function App(){
+//   return(
+//     <div>
+//       <FruitList/>
+//     </div>
+//   );
+// }
+import AddFruit from "./Components2406/Fruit_v1/AddFruit"
 function App(){
   return(
     <div>
-      <FruitList/>
+      <AddFruit />
     </div>
   );
 }
