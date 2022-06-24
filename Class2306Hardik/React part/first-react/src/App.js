@@ -23,7 +23,16 @@
 
 // export default App;
 
-import FruitList from "./AssignmentComponentsDay18/Q3/FruitList"
+// import FruitList from "./AssignmentComponentsDay18/Q3/FruitList"
+// function App(){
+//   return(
+//     <div>
+//       <FruitList/>
+//     </div>
+//   );
+// }
+// export default App;
+import FruitList from "./Components2406/FruitList"
 function App(){
   return(
     <div>
@@ -31,4 +40,5 @@ function App(){
     </div>
   );
 }
+
 export default App;

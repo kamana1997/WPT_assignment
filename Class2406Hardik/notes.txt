@@ -1,0 +1,4 @@
+Props:
+-> share data among components
+-> Parent C0mponent => Child component
+-> only to next Child then to next child and so on..
