@@ -1,0 +1,76 @@
+## Props : 
+-> Share data among Components.
+-> We can pass data from parent Component to the child Component.
+-> Only to the next child.
+-> Parent can pass data to only next child through props.
+-> How to share among Components?
+    -> Pass data from parent to next child then to next child and so on.
+
+## CSS
+-> Use className in <div> tag.
+-> Create a seperate CSS file and import that file.
+-> For inline CSS use style attribute
+    style = {{propertyName : value}}
+-> In inline CSS property name is in camel notation
+
+## Lift Up The State
+-> When we want to pass data of state from child to parent we call it lifting up the state. We pass the data of the state from child(AddFruit) to parent(Home) in function(since we can use props to send data from parent to child and not from child to parent).
+
+-> Example:
+
+   App                      App
+    |                        |
+AddFruit (state)           Home (state)
+    |                      |    |
+FruitTable          AddFruit    FruitTable
+    |                               |
+ TableRow                        TableRow
+
+## Problem Statement : 
+
+            A(data)
+        |       |
+        B       C
+    |               |
+    D               E
+                        |
+                        F
+                    |       |
+                    G       H
+
+If we want to pass data to G Component we have to pass the data from A->C->E->F->G, which is not correct way as C, E and F are unnecessarily getting data, therefore we use(context) a different way i.e.
+
+## Solution :
+
+            A(data) -----------> [data] : store in context
+        |       |
+        B       C
+    |               |
+    D               E
+                        |
+                        F
+                    |       |
+                    G       H
+A = Context Provider : Shares the data in downward heirarchy
+G = Consumer : Access tha data from context
+Note : Context can be passed from parent to any child but not from child
+       to parent. (downwards direction)
+
+How to Use ?
+
+## Provider Syntax : 
+
+<ContextVariable.Provider value={Pass data from here}>
+    <Component />
+</ContextVariable.Provider>
+
+## Consumer Syntax : 2 ways
+
+1. Use consumer : Access data directly in JSX
+<ContextVariable.Consumer>
+    {value => // write component code and access data from that}
+</ContextVariable.Consumer>
+
+2. Use useContext function ; Access inside Component function
+var variable = useContext(ContextVariable)
+-> Here variable will receive the value from Provider
