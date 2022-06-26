@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const fruitNameSlice = createSlice({
-    name : "fruit_name",
+    name : "fruitName",
     initialState : {
         fruit_name : "" //default value of state left side prop is also variable
     },

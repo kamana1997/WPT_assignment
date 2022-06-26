@@ -24,3 +24,4 @@ Store Steps:
 - Create store
 - use provider in top class to provide store
 - Create slice and reducer function
+- Now add slice to reducer in store (naming is !important)
