@@ -1,0 +1,7 @@
+React Redux:
+-> It is also solving the same problem which context solves.
+-> It is modified version of redux library for react.
+->Used for state management
+
+Install:
+
