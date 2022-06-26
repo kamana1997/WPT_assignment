@@ -3,5 +3,18 @@ React Redux:
 -> It is modified version of redux library for react.
 ->Used for state management
 
-Install:
+install @reduxjs/toolkit
 
+                                  App
+                                   |
+  Store(State & reducer)----------First (Producer)
+                                   |
+                                  Second
+                                   |
+                                  Third
+
+-> store is similar to context
+-> store contains the sates
+-> to change / manipulate the state we have reducer
+-> we can write fuctions in reducer to change the state
+-> reducer manipulates the state by dispatching a action function
