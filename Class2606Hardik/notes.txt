@@ -18,6 +18,7 @@ install @reduxjs/toolkit
 -> to change / manipulate the state we have reducer
 -> we can write fuctions in reducer to change the state
 -> reducer manipulates the state by dispatching a action function
+-> dispatch is created by component
 
 
 Store Steps:
