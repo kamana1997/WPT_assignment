@@ -18,3 +18,9 @@ install @reduxjs/toolkit
 -> to change / manipulate the state we have reducer
 -> we can write fuctions in reducer to change the state
 -> reducer manipulates the state by dispatching a action function
+
+
+Store Steps:
+- Create store
+- use provider in top class to provide store
+- Create slice and reducer function
